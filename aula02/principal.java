@@ -9,6 +9,8 @@ public class principal {
     }
 
     private static void exercicio02() {
+        System.out.println("*** exercicio02 ***");
+
         /*int[][] b = new int[2][2];
         b[0][0] = 5;
         b[0][1] = 10;
@@ -29,7 +31,7 @@ public class principal {
     }
 
     private static void exercicio01() {
-        System.out.println("***exercicio01*** ");
+        System.out.println("*** exercicio01 ***");
         int soma = 0;
         int valores[] = {87, 68, 94, 100, 83, 78, 85, 91, 76, 87};
         
