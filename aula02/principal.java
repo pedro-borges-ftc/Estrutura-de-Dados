@@ -6,6 +6,23 @@ public class principal {
         
         exercicio02();
 
+        exercicio03();
+
+    }
+
+    private static void exercicio03() {
+        System.out.println("*** exercicio03 ***");
+        int maior = 0;
+        int valores[] = {87, 68, 94, 100, 83, 78, 85, 91, 76, 87};
+        
+        for (int valor : valores) {
+            //System.out.println(valor);
+            if(valor > maior){
+                maior = valor;
+            }
+        }
+
+        System.out.println("O maior dos elementos do array é: " + maior);
     }
 
     private static void exercicio02() {
