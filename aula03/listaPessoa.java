@@ -13,6 +13,7 @@ public class listaPessoa {
         Pessoa valor;
 
         do {
+            System.out.println("******Lista de Pessoas*****:");
             System.out.println("Digite a opção desejada:");
             System.out.println("0 - Sair");
             System.out.println("1 - Adicionar");
@@ -71,6 +72,13 @@ public class listaPessoa {
                     Imprimir(playlist);
                     break;
             }
+            ler.nextLine();
+            try {
+                //new ProcessBuilder("cls").inheritIO().start().waitFor();  // Para windows
+                new ProcessBuilder("clear").inheritIO().start().waitFor();	// Para linux (acho que para mac também)
+              } catch(Exception e) {
+                e.printStackTrace();
+              }
         } while (opcao != 0);
     }
 

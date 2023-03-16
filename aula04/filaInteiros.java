@@ -1,55 +1,47 @@
-package aula03;
+package aula04;
 
-import java.util.ArrayList;
+import java.util.Queue;
+import java.util.LinkedList;
 import java.util.Scanner;
 
-public class listaString {
+public class filaInteiros {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
-        // A lista é criada vazia
-        ArrayList<String> playlist = new ArrayList<String>();
+        // A fila é criada vazia
+        Queue<Integer> q = new LinkedList<>();
+
         int opcao = 0;
-        String valor = "";
+        int valor = 0;
 
         do {
-            System.out.println("******Lista de Strings*****:");
+            System.out.println("******Fila de Inteiros*****:");
             System.out.println("Digite a opção desejada:");
             System.out.println("0 - Sair");
             System.out.println("1 - Adicionar");
             System.out.println("2 - Remover");
             System.out.println("3 - Tamanho");
-            System.out.println("4 - Buscar");
+            System.out.println("4 - Cabeça");
             System.out.println("5 - Imprimir");
-            System.out.println("6 - Ordenar");
             opcao = ler.nextInt(); 
             ler.nextLine(); 
 
             switch (opcao) {
                 case 1:// Adicionar
                     System.out.println("Digite o valor a ser adicionado:");
-                    valor = ler.nextLine();
-                    playlist.add(valor);
+                    valor = ler.nextInt();
+                    q.add(valor);
                     break;
                 case 2:// Remover
-                    System.out.println("Digite o valor a ser removido:");
-                    valor = ler.nextLine();
-                    playlist.remove(valor);
+                System.out.println("Elemento Removido: " + q.remove());;
                     break;
-
                 case 3:// Tamanho
-                    System.out.println("O tamanho atual é: " + playlist.size());
+                    System.out.println("O tamanho atual é: " + q.size());
                     break;
-                case 4:// Buscar
-                    System.out.println("Digite o valor a ser encontrado:");
-                    valor = ler.nextLine();
-                    System.out.println("Item encontrado [" + playlist.indexOf(valor) + "]");
+                case 4:// Cabeça
+                    System.out.println("O primeiro da fila é: " + q.peek());
                     break;
                 case 5:// Imprimir
-                    System.out.println(playlist.toString());
-                    break;
-                case 6:// Ordenar
-                    playlist.sort(null);
-                    System.out.println(playlist.toString());
+                    System.out.println("Fila de Inteiros: " + q.toString());
                     break;
             }
             ler.nextLine();
