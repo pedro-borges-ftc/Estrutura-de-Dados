@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localmysql://b607da35e52bd0:3d76b73bhost",
+            "driver": "MySQL",
+            "name": "Heroku-bd-MySql",
+            "connectString": "mysql://b607da35e52bd0:3d76b73b@us-cdbr-east-06.cleardb.net/heroku_58e6fd5ce18e7de?reconnect=true"
+        }
+    ]
+}
