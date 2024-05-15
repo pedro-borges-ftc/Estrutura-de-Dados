@@ -7,7 +7,7 @@ public class listaString {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
         // A lista é criada vazia
-        ArrayList<String> playlist = new ArrayList<String>();
+        ArrayList<String> minhaLista = new ArrayList<String>();
         int opcao = 0;
         String valor = "";
 
@@ -28,29 +28,30 @@ public class listaString {
                 case 1:// Adicionar
                     System.out.println("Digite o valor a ser adicionado:");
                     valor = ler.nextLine();
-                    playlist.add(valor);
+                    minhaLista.add(valor);    //add é o método que insere elementos num Arraylist
                     break;
                 case 2:// Remover
                     System.out.println("Digite o valor a ser removido:");
                     valor = ler.nextLine();
-                    playlist.remove(valor);
+                    minhaLista.remove(valor);   //remove é o método que exclui um item do Arraylist
                     break;
-
                 case 3:// Tamanho
-                    System.out.println("O tamanho atual é: " + playlist.size());
+                    System.out.println("O tamanho atual é: " + minhaLista.size()); //size é o método que devolve o tamanho do Arraylist
                     break;
                 case 4:// Buscar
                     System.out.println("Digite o valor a ser encontrado:");
                     valor = ler.nextLine();
-                    System.out.println("Item encontrado [" + playlist.indexOf(valor) + "]");
+                    System.out.println("Item encontrado [" + minhaLista.indexOf(valor) + "]"); //indexof é o método que localiza um elemento no Arraylist através do valor
                     break;
                 case 5:// Imprimir
-                    System.out.println(playlist.toString());
+                    System.out.println(minhaLista.toString()); //toString é o método que imprime o Arraylist
                     break;
                 case 6:// Ordenar
-                    playlist.sort(null);
-                    System.out.println(playlist.toString());
+                    minhaLista.sort(null); //sort é o método que ordena o array
+                    System.out.println(minhaLista.toString());
                     break;
+                default:
+                System.out.println("opção inválida : " + opcao);
             }
             ler.nextLine();
             try {
@@ -59,6 +60,6 @@ public class listaString {
               } catch(Exception e) {
                 e.printStackTrace();
               }
-        } while (opcao != 0);
+        } while (opcao != 0);   
     }
 }

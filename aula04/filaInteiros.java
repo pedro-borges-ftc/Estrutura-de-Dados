@@ -32,7 +32,11 @@ public class filaInteiros {
                     q.add(valor);
                     break;
                 case 2:// Remover
-                System.out.println("Elemento Removido: " + q.remove());;
+                    if(q.size() > 0){
+                        System.out.println("Elemento Removido: " + q.remove());
+                    }else{
+                        System.out.println("A fila está vazia.");
+                    }                
                     break;
                 case 3:// Tamanho
                     System.out.println("O tamanho atual é: " + q.size());

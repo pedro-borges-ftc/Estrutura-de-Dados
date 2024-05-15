@@ -24,7 +24,11 @@ public class pilhaInteiros {
                     pilha.push(valor);
                     break;
                 case 2:// Remover
-                System.out.println("Elemento Removido: " + pilha.pop());;
+                    if(pilha.size() > 0){
+                        System.out.println("Elemento Removido: " + pilha.pop());
+                    }else{
+                        System.out.println("A pilha está vazia.");
+                    }
                     break;
                 case 3:// Tamanho
                     System.out.println("O tamanho atual é: " + pilha.size());
